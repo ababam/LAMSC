@@ -79,7 +79,7 @@ def SKB_with_human(image_path):
 def SKB_with_auto(image_path,device="cuda",dataset="example"):
     save_path = os.path.join(f"data/segments/{dataset}")
     img_name = image_path.split(os.path.sep)[-1]
-    seg_dir = os.path.join(save_path, img_name.lower().replace('.jpg', '').replace('.png', '').replace('.jpeg', ''))
+    seg_dir = os.path.join(save_path, img_name.lower().replace('.jpg', '').replace('.png', '').replace('.jpeg', ''))# lower:  Replace capital letters with lowercase letters
     image = cv2.imread(image_path)
     image = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
     max_segment_num = 5 # Number of segments retained
